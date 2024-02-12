@@ -62,4 +62,11 @@ public class LaskinTest { // Luokan nimen loppu pitää olla Test
         laskin.kerro(10);
        assertEquals(100, laskin.annaTulos(), "kerro ei toimi");
     }
+
+    @Test
+    public void testDoubleKerro() {
+        laskin.lisaa(10.5);
+        laskin.kerro(10.5);
+        assertEquals(110.25, laskin.annaTulos(), DELTA);
+    }
 }
